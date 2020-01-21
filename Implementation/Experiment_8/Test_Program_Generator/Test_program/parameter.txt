@@ -1,0 +1,144 @@
+;parameters: Define parameter for test program generation.
+
+iterator=27
+pattern_count=28
+branch_count=26
+result_address=29
+pattern_address=30
+result_register=18
+source_register1=15
+source_register2=16
+jump_address=25
+shift_amount=5
+
+
+;for testing OP1
+
+y a_add
+n a_addu
+n a_and
+n a _nor
+n a_or
+n a_subu
+y a_sub
+n a_xor
+n a_sllv
+n a_slt
+n a_sltu
+n a_srav
+n a_srlv
+n a_sll
+n a_srl
+n a_sra
+
+
+;n a_mult
+;n a_multu
+;n a_mfhi
+;n a_mflo
+;n a_mthi
+;n a_mtlo
+
+
+;for testing HILO
+
+n b_mult
+n b_multu
+n c_mthi
+n c_mtlo
+
+
+
+; for immediate
+
+y i_addi
+n i_addiu
+n i_andi
+n i_ori
+n i_slti
+n i_sltiu
+n i_xori
+
+
+
+#for coprocssor writing
+
+n 1_mtc0
+n 1_mfc0
+
+
+#for load and store
+
+n 2_lw_sw
+
+
+# For co_processor load and store -- modify
+
+n 3_lw0_sw0
+
+
+#pseudo-exhaustive data
+
+p_add
+p_sub
+p_addu
+p_subu
+p_and
+p_or
+p_xor
+p_nor
+p_sll
+p_srl
+p_srlv
+p_sra
+p_slt
+p_sltu
+p_mult
+p_multu
+p_addi
+p_addiu
+p_andi
+p_ori
+p_slti
+p_sltiu
+p_xori
+p_srav
+
+
+#Random data
+r_add
+r_sub
+r_addu
+r_subu
+r_and
+r_or
+r_xor
+r_nor
+r_sll
+r_srl
+r_srlv
+r_sra
+r_slt
+r_sltu
+r_mult
+r_multu
+r_addi
+r_addiu
+r_andi
+r_ori
+r_slti
+r_sltiu
+r_xori
+r_srav
+
+
+;Branches
+
+n d_beq
+n d_bne
+n e_bgez
+n e_bgezal
+n e_bgtz
+n e_blez
+n e_bltz
+n e_bltzal
