@@ -1,3 +1,5 @@
+# Copyright (C) 2020 Oyeniran Adeboye Stephen, Osidibo
+
 def pseudo_template(inputFile, out, instruct, result_register):
   f = open(inputFile, 'r')  # input file
 
