@@ -1,3 +1,4 @@
+# Copyright (C) 2020 Oyeniran Adeboye Stephen, Olusiji, Osidibo
 import reset
 import load_memory
 import op2_template
