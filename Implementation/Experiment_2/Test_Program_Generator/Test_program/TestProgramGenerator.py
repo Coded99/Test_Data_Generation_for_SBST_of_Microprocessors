@@ -1,12 +1,8 @@
 import reset
 import load_memory
-import op2_template
-import op1_template
 import pseudo_template
 import register_test
 import pipeline
-import op2_template_optimized
-import op1_template_optimized
 
 
 parameter = "parameter.txt"
