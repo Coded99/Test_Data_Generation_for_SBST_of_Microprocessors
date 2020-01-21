@@ -1,0 +1,255 @@
+jal reset_offsets
+operation_pipeline_1:
+  lui $1, 65535
+  ori $1, $1, 65535
+  lui $2, 0
+  ori $2, $2, 0
+  lui $3, 21845
+  ori $3, $3, 21845
+  lui $4, 43690
+  ori $4, $4, 43690
+  and $1, $1, $2
+  sw $1, 0($29)
+  jal increment_offset
+  or $4, $1, $3
+  sw $4, 0($29)
+  jal increment_offset
+  or $5, $4, $1
+  sw $5, 0($29)
+  jal increment_offset
+  ;and $1, $1, $2       separate this into another procedure
+  ;sw $1, 0($29)
+  ;jal increment_offset
+  ;or $4, $3, $1
+  ;sw $4, 0($29)
+  ;jal increment_offset
+  ;or $5, $1, $4
+  ;sw $5, 0($29)
+  ;jal increment_offset
+
+jal reset_offsets
+operation_pipeline_2:
+  lui $1, 0
+  ori $1, $1, 0
+  lui $2, 65535
+  ori $2, $2, 65535
+  lui $3, 43690
+  ori $3, $3, 43690
+  lui $4, 21845
+  ori $4, $4, 21845
+  and $1, $1, $2
+  sw $1, 0($29)
+  jal increment_offset
+  or $4, $1, $3
+  sw $4, 0($29)
+  jal increment_offset
+  or $5, $4, $1
+  sw $5, 0($29)
+  jal increment_offset
+  ;and $1, $1, $2       separate this into another procedure
+  ;sw $1, 0($29)
+  ;jal increment_offset
+  ;or $4, $3, $1
+  ;sw $4, 0($29)
+  ;jal increment_offset
+  ;or $5, $1, $4
+  ;sw $5, 0($29)
+  ;jal increment_offset
+
+jal reset_offsets
+operation_add_d:
+  lui $1, 0
+  ori $1, $1, 0
+  lui $2, 0
+  ori $2, $2, 0
+  lui $3, 0
+  ori $3, $3, 0
+  lui $4, 65535
+  ori $4, $4, 65535
+  lui $5, 65535
+  ori $5, $5, 65535
+  lui $6, 0
+  ori $6, $6, 0
+  lui $7, 21845
+  ori $7, $7, 21845
+  lui $8, 21845
+  ori $8, $8, 21845
+  lui $9, 43690
+  ori $9, $9, 43690
+  lui $10, 43690
+  ori $10, $10, 43690
+  lui $11, 0
+  ori $11, $11, 1
+  lui $12, 65535
+  ori $12, $12, 65535
+  lui $13, 65535
+  ori $13, $13, 65535
+  lui $14, 0
+  ori $14, $14, 1
+  lui $15, 65535
+  ori $15, $15, 65535
+  lui $16, 65535
+  ori $16, $16, 65535
+  lui $17, 26214
+  ori $17, $17, 26214
+  lui $19, 21845
+  ori $19, $18, 21845
+  addu $18, $1, $2
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $3, $4
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $5, $6
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $7, $8
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $9, $10
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $11, $12
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $13, $14
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $15, $16
+  sw $18, 0($29)
+  jal increment_offset
+  addu $18, $17, $19
+  sw $18, 0($29)
+  jal increment_offset
+
+jal reset_offsets
+operation_sub_d:
+  lui $1, 0
+  ori $1, $1, 0
+  lui $2, 0
+  ori $2, $2, 0
+  lui $3, 0
+  ori $3, $3, 0
+  lui $4, 0
+  ori $4, $4, 1
+  lui $5, 0
+  ori $5, $5, 0
+  lui $6, 65535
+  ori $6, $6, 65535
+  lui $7, 21845
+  ori $7, $7, 21845
+  lui $8, 43690
+  ori $8, $8, 43690
+  lui $9, 43690
+  ori $9, $9, 43690
+  lui $10, 21845
+  ori $10, $10, 21845
+  lui $11, 65535
+  ori $11, $11, 65535
+  lui $12, 0
+  ori $12, $12, 1
+  lui $13, 65535
+  ori $13, $13, 65534
+  lui $14, 65535
+  ori $14, $14, 65534
+  lui $15, 65535
+  ori $15, $15, 65534
+  lui $16, 65535
+  ori $16, $16, 65535
+  lui $17, 26214
+  ori $17, $17, 26214
+  lui $19, 21845
+  ori $19, $18, 21845
+  subu $18, $1, $2
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $3, $4
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $5, $6
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $7, $8
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $9, $10
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $11, $12
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $13, $14
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $15, $16
+  sw $18, 0($29)
+  jal increment_offset
+  subu $18, $17, $19
+  sw $18, 0($29)
+  ;jal increment_offset
+
+  jal reset_offsets
+  operation_sub_d:
+    lui $1, 0
+    ori $1, $1, 0
+    lui $2, 0
+    ori $2, $2, 0
+    lui $3, 0
+    ori $3, $3, 0
+    lui $4, 0
+    ori $4, $4, 1
+    lui $5, 0
+    ori $5, $5, 0
+    lui $6, 65535
+    ori $6, $6, 65535
+    lui $7, 21845
+    ori $7, $7, 21845
+    lui $8, 43690
+    ori $8, $8, 43690
+    lui $9, 43690
+    ori $9, $9, 43690
+    lui $10, 21845
+    ori $10, $10, 21845
+    lui $11, 65535
+    ori $11, $11, 65535
+    lui $12, 0
+    ori $12, $12, 1
+    lui $13, 65535
+    ori $13, $13, 65534
+    lui $14, 65535
+    ori $14, $14, 65534
+    lui $15, 65535
+    ori $15, $15, 65534
+    lui $16, 65535
+    ori $16, $16, 65535
+    lui $17, 26214
+    ori $17, $17, 26214
+    lui $19, 21845
+    ori $19, $18, 21845
+    subu $18, $1, $2
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $3, $4
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $5, $6
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $7, $8
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $9, $10
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $11, $12
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $13, $14
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $15, $16
+    sw $18, 0($29)
+    jal increment_offset
+    subu $18, $17, $19
+    sw $18, 0($29)
+    ;jal increment_offset 
